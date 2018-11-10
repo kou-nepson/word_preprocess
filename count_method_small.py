@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 from preprocess import preprocess, create_co_matrix, ppmi
 
 
-text = 'You say goodbye and I say hello.'
+text = 'You know the bed feels warmer Sleeping here alone'
 corpus, word_to_id, id_to_word = preprocess(text)
 vocab_size = len(id_to_word)
 C = create_co_matrix(corpus, vocab_size, window_size=1)
