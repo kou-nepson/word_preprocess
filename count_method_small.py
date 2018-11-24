@@ -5,10 +5,10 @@ import matplotlib.pyplot as plt
 from preprocess import preprocess, create_co_matrix, ppmi
 
 
-text = 'You know the bed feels warmer Sleeping here alone'
+text = ' One of the several things that I do to stay healthy is to go jogging in my neighborhood. The reason why I do it is because it doesn’t require any special equipment. All I need to do is to put my shoes on and go outside, so it’s pretty easy to stick with. Another thing is to eat a healthy, well-balanced diet. Eating more vegetables and less salty food makes me feel well. People often say “you are what you eat,” and I think the saying is definitely true.'
 corpus, word_to_id, id_to_word = preprocess(text)
 vocab_size = len(id_to_word)
-C = create_co_matrix(corpus, vocab_size, window_size=1)
+C = create_co_matrix(corpus, vocab_size, window_size=15)
 W = ppmi(C)
 
 #SVDのやつ
